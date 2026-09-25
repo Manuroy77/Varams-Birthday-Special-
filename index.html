@@ -1,21 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
     <title>Happy Birthday Varam ❤️</title>
 
+
     <style>
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
+
         html {
             scroll-behavior: smooth;
         }
+
 
         body {
             font-family: Georgia, serif;
@@ -24,167 +32,300 @@
             overflow-x: hidden;
         }
 
-        section {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 35px 20px;
-            position: relative;
-        }
 
-        .content {
-            max-width: 650px;
-            width: 100%;
-            z-index: 2;
-        }
-
-        /* FLOATING HEARTS */
+        /* =========================
+           FLOATING HEARTS
+        ========================= */
 
         .heart {
             position: fixed;
             bottom: -30px;
+
             color: #ff4d6d;
+
             font-size: 20px;
-            animation: float 7s linear infinite;
+
+            animation:
+                float 7s linear infinite;
+
             opacity: 0.7;
+
             z-index: 1;
+
             pointer-events: none;
         }
+
 
         @keyframes float {
 
             0% {
-                transform: translateY(0) rotate(0deg);
+                transform:
+                    translateY(0)
+                    rotate(0deg);
+
                 opacity: 0;
             }
+
 
             20% {
                 opacity: 1;
             }
 
+
             100% {
-                transform: translateY(-110vh) rotate(360deg);
+
+                transform:
+                    translateY(-110vh)
+                    rotate(360deg);
+
                 opacity: 0;
             }
         }
 
-        /* HOME */
 
-        #home {
-            background:
-            radial-gradient(
-                circle,
-                #5c001f 0%,
-                #30000f 42%,
-                #160008 100%
-            );
+
+        /* =========================
+           COMMON
+        ========================= */
+
+        section {
+
+            min-height: 100vh;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            text-align: center;
+
+            padding: 35px 20px;
+
+            position: relative;
         }
+
+
+        .content {
+
+            max-width: 650px;
+
+            width: 100%;
+
+            z-index: 2;
+        }
+
+
+
+        /* =========================
+           HEART
+        ========================= */
 
         .main-heart {
+
             font-size: 75px;
-            animation: heartbeat 1.5s infinite;
-            margin-bottom: 10px;
+
+            animation:
+                heartbeat 1.5s infinite;
+
+            margin-bottom: 15px;
         }
+
 
         @keyframes heartbeat {
 
-            0%,100% {
+            0%,
+            100% {
                 transform: scale(1);
             }
+
 
             50% {
                 transform: scale(1.15);
             }
         }
 
-        .small-text {
-            font-size: 19px;
-            color: #ffb3c1;
-            margin-bottom: 16px;
+
+
+        /* =========================
+           HOME
+        ========================= */
+
+        #home {
+
+            background:
+
+                radial-gradient(
+
+                    circle,
+
+                    #650021 0%,
+
+                    #350010 45%,
+
+                    #160008 100%
+                );
         }
+
+
+        .small-text {
+
+            font-size: 19px;
+
+            color: #ffb3c1;
+
+            margin-bottom: 15px;
+        }
+
 
         h1 {
+
             font-size: 44px;
+
             color: #ff6b81;
+
             line-height: 1.2;
-            margin-bottom: 18px;
+
+            margin-bottom: 20px;
         }
 
+
         .message {
+
             font-size: 19px;
+
             line-height: 1.7;
+
             color: #ffd9df;
+
             margin-top: 20px;
         }
 
+
         button {
-            margin-top: 28px;
-            padding: 14px 27px;
+
+            margin-top: 30px;
+
+            padding: 14px 28px;
+
             border: none;
+
             border-radius: 30px;
+
             background: #ff416c;
+
             color: white;
+
             font-size: 16px;
+
             cursor: pointer;
-            box-shadow: 0 0 20px rgba(255,65,108,0.7);
+
+            box-shadow:
+                0 0 20px
+                rgba(255,65,108,0.7);
+
+            transition: 0.3s;
         }
+
 
         button:hover {
-            transform: scale(1.05);
+
+            transform: scale(1.08);
         }
 
-        /* BIRTHDAY */
+
+
+        /* =========================
+           BIRTHDAY
+        ========================= */
 
         #birthday {
+
             background: #22000d;
         }
 
+
         .date {
-            font-size: 22px;
+
+            font-size: 23px;
+
             color: #ffb3c1;
-            margin-bottom: 14px;
+
+            margin-bottom: 15px;
         }
+
 
         h2 {
+
             font-size: 36px;
+
             color: #ff6b81;
-            line-height: 1.25;
+
+            line-height: 1.3;
         }
 
-        /* MEMORIES */
+
+
+        /* =========================
+           MEMORIES
+        ========================= */
 
         #memories {
+
             background: #180009;
+
             display: block;
-            padding-top: 70px;
-            padding-bottom: 70px;
+
+            padding-top: 80px;
+
+            padding-bottom: 80px;
         }
 
+
         .memory {
+
             max-width: 340px;
-            margin: 35px auto 0;
+
+            margin: 40px auto;
 
             background: white;
 
             padding: 10px 10px 18px;
 
             box-shadow:
-                0 10px 30px rgba(0,0,0,0.5);
+                0 10px 35px
+                rgba(0,0,0,0.6);
 
             border-radius: 3px;
+
+            transition: 0.4s;
         }
 
-        .memory:nth-child(odd) {
-            transform: rotate(-1.5deg);
+
+        .memory:hover {
+
+            transform:
+                scale(1.03)
+                rotate(0deg);
         }
+
 
         .memory:nth-child(even) {
-            transform: rotate(1.5deg);
+
+            transform:
+                rotate(1.5deg);
         }
 
+
+        .memory:nth-child(odd) {
+
+            transform:
+                rotate(-1.5deg);
+        }
+
+
         .memory img {
+
             display: block;
 
             width: 100%;
@@ -196,35 +337,53 @@
             object-fit: cover;
         }
 
+
         .caption {
+
             color: #333;
 
             font-size: 16px;
 
-            line-height: 1.45;
+            line-height: 1.5;
 
-            margin-top: 12px;
+            margin-top: 13px;
+
+            padding: 0 5px;
         }
 
-        /* LOVE LETTER */
+
+
+        /* =========================
+           LOVE LETTER
+        ========================= */
 
         #letter {
+
             background:
-            radial-gradient(
-                circle,
-                #4d001a,
-                #160008 70%
-            );
+
+                radial-gradient(
+
+                    circle,
+
+                    #50001c,
+
+                    #160008 70%
+                );
         }
 
-        .letter {
-            background: rgba(255,255,255,0.08);
 
-            border: 1px solid rgba(255,255,255,0.15);
+        .letter {
+
+            background:
+                rgba(255,255,255,0.08);
+
+            border:
+                1px solid
+                rgba(255,255,255,0.15);
 
             border-radius: 20px;
 
-            padding: 28px;
+            padding: 30px;
 
             line-height: 1.85;
 
@@ -233,120 +392,174 @@
             color: #ffe6eb;
 
             box-shadow:
-                0 0 30px rgba(255,65,108,0.2);
+                0 0 30px
+                rgba(255,65,108,0.25);
 
             margin-top: 25px;
 
             text-align: left;
         }
 
-        /* FINAL */
+
+
+        /* =========================
+           FINAL
+        ========================= */
 
         #final {
+
             background: #0e0005;
         }
 
+
         .final-text {
-            font-size: 34px;
+
+            font-size: 35px;
 
             color: #ff6b81;
 
             line-height: 1.4;
         }
 
+
         .love {
-            margin-top: 24px;
+
+            margin-top: 25px;
 
             font-size: 22px;
 
-            line-height: 1.7;
+            line-height: 1.8;
 
             color: #ffd1da;
         }
 
-        /* MOBILE */
+
+
+        /* =========================
+           MOBILE
+        ========================= */
 
         @media(max-width:600px) {
 
             h1 {
+
                 font-size: 34px;
             }
 
+
             h2 {
+
                 font-size: 30px;
             }
 
+
             .final-text {
+
                 font-size: 28px;
             }
 
+
             .message {
+
                 font-size: 17px;
             }
 
+
             .memory {
+
                 max-width: 330px;
             }
+
+
+            .letter {
+
+                font-size: 16px;
+
+                padding: 24px;
+            }
+
         }
 
     </style>
+
 </head>
 
 
 <body>
 
 
-    <!-- FLOATING HEARTS -->
+
+    <!-- =========================
+         FLOATING HEARTS
+    ========================= -->
 
     <div class="heart"
          style="left:8%; animation-delay:0s;">
         ❤️
     </div>
 
+
     <div class="heart"
-         style="left:24%; animation-delay:2s;">
+         style="left:25%; animation-delay:2s;">
         💕
     </div>
 
-    <div class="heart"
-         style="left:44%; animation-delay:4s;">
-        ❤️
-    </div>
 
     <div class="heart"
-         style="left:64%; animation-delay:1s;">
+         style="left:45%; animation-delay:4s;">
         💗
     </div>
 
+
     <div class="heart"
-         style="left:84%; animation-delay:3s;">
+         style="left:65%; animation-delay:1s;">
         ❤️
     </div>
 
 
-    <!-- HOME -->
+    <div class="heart"
+         style="left:85%; animation-delay:3s;">
+        💕
+    </div>
+
+
+
+    <!-- =========================
+         HOME
+    ========================= -->
 
     <section id="home">
 
         <div class="content">
 
+
             <div class="main-heart">
                 ❤️
             </div>
+
 
             <p class="small-text">
                 Hey Varam...
             </p>
 
+
             <h1>
-                I made something<br>
-                just for you.
+
+                I made something
+                <br>
+
+                just for you. ❤️
+
             </h1>
 
+
             <p class="message">
+
                 Because someone as special as you
                 deserves a little surprise.
+
             </p>
+
 
             <button
                 onclick="openSurprise()">
@@ -355,25 +568,39 @@
 
             </button>
 
+
         </div>
 
     </section>
 
 
-    <!-- BIRTHDAY -->
+
+    <!-- =========================
+         BIRTHDAY
+    ========================= -->
 
     <section id="birthday">
 
         <div class="content">
 
+
             <p class="date">
+
                 October 1 🎂
+
             </p>
 
+
             <h2>
-                Happy Birthday,<br>
+
+                Happy Birthday,
+
+                <br>
+
                 My Beautiful Varam ❤️
+
             </h2>
+
 
             <p class="message">
 
@@ -381,26 +608,38 @@
 
                 <br><br>
 
-                But honestly, I'm just happy
-                that someone as beautiful as you
-                exists in my world. ❤️
+                But honestly,
+
+                I'm just happy that
+                someone as beautiful as you
+                exists in my world.
+
+                ❤️
 
             </p>
+
 
         </div>
 
     </section>
 
 
-    <!-- MEMORIES -->
+
+    <!-- =========================
+         MEMORIES
+    ========================= -->
 
     <section id="memories">
 
         <div class="content">
 
+
             <h2>
+
                 Our Little Memories ❤️
+
             </h2>
+
 
             <p class="message">
 
@@ -414,107 +653,164 @@
             </p>
 
 
+
             <!-- PHOTO 1 -->
 
             <div class="memory">
 
+
                 <img
-                    src="photo1.jpg"
-                    alt="Varam">
+
+                    src="IMG-20260622-WA0004.jpg"
+
+                    alt="Varam"
+
+                >
+
 
                 <p class="caption">
 
                     Somehow, you make even
-                    a simple moment look beautiful. ❤️
+                    a simple moment look beautiful.
+
+                    ❤️
 
                 </p>
 
+
             </div>
+
 
 
             <!-- PHOTO 2 -->
 
             <div class="memory">
 
+
                 <img
-                    src="photo2.jpg"
-                    alt="Our hands">
+
+                    src="IMG-20260520-WA0005.jpg"
+
+                    alt="Our hands"
+
+                >
+
 
                 <p class="caption">
 
-                    Two hands, one little promise...
-                    and a thousand feelings. ❤️
+                    Two hands,
+
+                    one little promise...
+
+                    and a thousand feelings.
+
+                    ❤️
 
                 </p>
 
+
             </div>
+
 
 
             <!-- PHOTO 3 -->
 
             <div class="memory">
 
+
                 <img
-                    src="photo3.jpg"
-                    alt="Us together">
+
+                    src="IMG-20260429-WA0001.jpg"
+
+                    alt="Us together"
+
+                >
+
 
                 <p class="caption">
 
-                    My favorite place has always been
-                    somewhere close to you. 🫶
+                    My favorite place
+                    has always been
+                    somewhere close to you.
+
+                    🫶
 
                 </p>
 
+
             </div>
+
 
 
             <!-- PHOTO 4 -->
 
             <div class="memory">
 
+
                 <img
-                    src="photo4.jpg"
-                    alt="Us together">
+
+                    src="IMG-20260521-WA0028.jpg"
+
+                    alt="Us together"
+
+                >
+
 
                 <p class="caption">
 
-                    Maybe the best memories aren't
-                    about where we are...
+                    Maybe the best memories
+                    aren't about where we are...
 
-                    <br>
+                    <br><br>
 
-                    They're simply about being together. ❤️
+                    They're simply about
+                    being together.
+
+                    ❤️
 
                 </p>
 
+
             </div>
+
 
         </div>
 
     </section>
 
 
-    <!-- LOVE LETTER -->
+
+    <!-- =========================
+         LOVE LETTER
+    ========================= -->
 
     <section id="letter">
 
         <div class="content">
 
+
             <h2>
-                A Little Letter For You 💌
+
+                A Little Letter
+                For You 💌
+
             </h2>
 
 
             <div class="letter">
 
+
                 Varam,
 
                 <br><br>
 
+
                 I don't need a special reason
-                to tell you how much you mean to me.
+                to tell you how much you mean
+                to me.
 
                 <br><br>
+
 
                 But today, on your birthday,
                 I just want you to know that
@@ -523,67 +819,103 @@
 
                 <br><br>
 
-                Your smile, your presence,
+
+                Your smile,
+
+                your presence,
+
                 and all the little things
                 that make you <i>you</i>
-                make you incredibly special to me.
+
+                make you incredibly special
+                to me.
 
                 <br><br>
+
 
                 I hope this new year of your life
-                brings you countless reasons to smile,
+                brings you countless reasons
+                to smile,
+
                 beautiful moments to remember,
-                and all the happiness your heart deserves.
+
+                and all the happiness
+                your heart deserves.
 
                 <br><br>
 
+
                 Happy Birthday,
+
+                <br>
+
                 my beautiful Varam. ❤️
 
+
             </div>
+
 
         </div>
 
     </section>
 
 
-    <!-- FINAL -->
+
+    <!-- =========================
+         FINAL
+    ========================= -->
 
     <section id="final">
 
         <div class="content">
 
+
             <div class="main-heart">
+
                 ❤️
+
             </div>
+
 
             <h2 class="final-text">
 
-                Happy Birthday,<br>
+                Happy Birthday,
+
+                <br>
+
                 My Beautiful Varam ❤️
 
             </h2>
 
+
             <p class="love">
 
-                Keep smiling.<br>
-
-                Keep shining.<br>
-
-                And always remember...
+                Keep smiling.
 
                 <br>
 
-                you are loved. ❤️
+                Keep shining.
+
+                <br>
+
+                And always remember...
+
+                <br><br>
+
+                You are loved. ❤️
 
             </p>
+
 
         </div>
 
     </section>
 
 
-    <!-- JAVASCRIPT -->
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================= -->
 
     <script>
 
@@ -592,7 +924,9 @@
             document
                 .getElementById("birthday")
                 .scrollIntoView({
+
                     behavior: "smooth"
+
                 });
 
         }
@@ -601,4 +935,5 @@
 
 
 </body>
+
 </html>
