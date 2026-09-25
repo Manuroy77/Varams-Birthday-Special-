@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Happy Birthday Varam ❤️</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Georgia, serif;
+            background: #160008;
+            color: white;
+            overflow-x: hidden;
+        }
+
+        /* Floating Hearts */
+
+        .heart {
+            position: fixed;
+            bottom: -20px;
+            color: #ff4d6d;
+            font-size: 20px;
+            animation: float 6s linear infinite;
+            opacity: 0.7;
+            z-index: 1;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 0;
+            }
+
+            20% {
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateY(-100vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        /* Sections */
+
+        section {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 30px 20px;
+            position: relative;
+        }
+
+        .content {
+            max-width: 600px;
+            z-index: 2;
+        }
+
+        /* Opening */
+
+        #home {
+            background:
+                radial-gradient(circle at center,
+                #5c001f 0%,
+                #30000f 40%,
+                #160008 100%);
+        }
+
+        .small-text {
+            font-size: 18px;
+            color: #ffb3c1;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 45px;
+            color: #ff6b81;
+            margin-bottom: 20px;
+        }
+
+        .main-heart {
+            font-size: 80px;
+            animation: heartbeat 1.5s infinite;
+        }
+
+        @keyframes heartbeat {
+            0%, 100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.15);
+            }
+        }
+
+        button {
+            margin-top: 30px;
+            padding: 14px 28px;
+            border: none;
+            border-radius: 30px;
+            background: #ff416c;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            box-shadow: 0 0 20px #ff416c;
+        }
+
+        button:hover {
+            transform: scale(1.05);
+        }
+
+        /* Birthday */
+
+        #birthday {
+            background: #22000d;
+        }
+
+        .date {
+            font-size: 22px;
+            color: #ffb3c1;
+            margin-bottom: 15px;
+        }
+
+        .birthday-title {
+            font-size: 42px;
+            color: #ff6b81;
+        }
+
+        .message {
+            font-size: 20px;
+            line-height: 1.7;
+            color: #ffd9df;
+            margin-top: 20px;
+        }
+
+        /* Photos */
+
+        #memories {
+            background: #180009;
+            flex-direction: column;
+        }
+
+        .photo-box {
+            margin-top: 35px;
+            width: 280px;
+            background: #fff;
+            padding: 10px 10px 20px;
+            transform: rotate(-2deg);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        .photo-box img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .caption {
+            color: #333;
+            font-size: 16px;
+            margin-top: 12px;
+        }
+
+        /* Letter */
+
+        #letter {
+            background:
+                radial-gradient(circle,
+                #4d001a,
+                #160008 70%);
+        }
+
+        .letter {
+            background: rgba(255,255,255,0.08);
+            border: 1px solid rgba(255,255,255,0.15);
+            border-radius: 20px;
+            padding: 30px;
+            line-height: 1.8;
+            font-size: 18px;
+            color: #ffe6eb;
+            box-shadow: 0 0 30px rgba(255,65,108,0.2);
+        }
+
+        /* Final */
+
+        #final {
+            background: #0e0005;
+        }
+
+        .final-text {
+            font-size: 35px;
+            color: #ff6b81;
+            line-height: 1.4;
+        }
+
+        .love {
+            margin-top: 25px;
+            font-size: 24px;
+            color: #ffd1da;
+        }
+
+        /* Mobile */
+
+        @media (max-width: 600px) {
+
+            h1 {
+                font-size: 34px;
+            }
+
+            .birthday-title {
+                font-size: 32px;
+            }
+
+            .final-text {
+                font-size: 28px;
+            }
+
+            .message {
+                font-size: 17px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Floating Hearts -->
+    <div class="heart" style="left:10%; animation-delay:0s;">❤️</div>
+    <div class="heart" style="left:25%; animation-delay:2s;">💕</div>
+    <div class="heart" style="left:45%; animation-delay:4s;">❤️</div>
+    <div class="heart" style="left:65%; animation-delay:1s;">💗</div>
+    <div class="heart" style="left:85%; animation-delay:3s;">❤️</div>
+
+
+    <!-- HOME -->
+
+    <section id="home">
+
+        <div class="content">
+
+            <div class="main-heart">❤️</div>
+
+            <p class="small-text">
+                Hey Varam...
+            </p>
+
+            <h1>
+                I made something<br>
+                just for you.
+            </h1>
+
+            <p class="message">
+                Because someone as special as you
+                deserves a little surprise.
+            </p>
+
+            <button onclick="openSurprise()">
+                Open My Surprise 💌
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- BIRTHDAY -->
+
+    <section id="birthday">
+
+        <div class="content">
+
+            <p class="date">
+                October 1 🎂
+            </p>
+
+            <h2 class="birthday-title">
+                Happy Birthday,<br>
+                My Beautiful Varam ❤️
+            </h2>
+
+            <p class="message">
+                Today is your day...
+                but honestly, I'm just happy
+                that someone as beautiful as you
+                exists in my world. ❤️
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- MEMORIES -->
+
+    <section id="memories">
+
+        <div class="content">
+
+            <h2 class="birthday-title">
+                Our Little Memories ❤️
+            </h2>
+
+            <p class="message">
+                Every picture has a memory.
+                And every memory with you
+                has a special place in my heart.
+            </p>
+
+            <!-- PHOTO 1 -->
+
+            <div class="photo-box">
+
+                <img src="photo1.jpg" alt="Varam">
+
+                <p class="caption">
+                    Some pictures capture a moment...
+                    but this one captures a feeling. ❤️
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- LOVE LETTER -->
+
+    <section id="letter">
+
+        <div class="content">
+
+            <h2 class="birthday-title">
+                A Little Letter For You 💌
+            </h2>
+
+            <div class="letter">
+
+                Varam,
+
+                <br><br>
+
+                I don't need a special reason to tell you
+                how much you mean to me.
+
+                <br><br>
+
+                But today, on your birthday,
+                I just want you to know that
+                having you in my life is something
+                I'll always be grateful for.
+
+                <br><br>
+
+                Your smile, your presence,
+                your little ways of being you...
+                they all make you incredibly special to me.
+
+                <br><br>
+
+                I hope this new year of your life
+                brings you countless reasons to smile.
+
+                <br><br>
+
+                Happy Birthday, my beautiful Varam. ❤️
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FINAL -->
+
+    <section id="final">
+
+        <div class="content">
+
+            <div class="main-heart">
+                ❤️
+            </div>
+
+            <h2 class="final-text">
+                Happy Birthday,<br>
+                My Beautiful Varam ❤️
+            </h2>
+
+            <p class="love">
+                Keep smiling.<br>
+                Keep shining.<br>
+                And always remember...
+                you are loved. ❤️
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <script>
+
+        function openSurprise() {
+
+            document.getElementById("birthday")
+                .scrollIntoView({
+                    behavior: "smooth"
+                });
+
+        }
+
+    </script>
+
+</body>
+</html>
