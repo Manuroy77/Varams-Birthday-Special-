@@ -13,6 +13,10 @@
             box-sizing: border-box;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             font-family: Georgia, serif;
             background: #160008;
@@ -20,19 +24,37 @@
             overflow-x: hidden;
         }
 
-        /* Floating Hearts */
+        section {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 35px 20px;
+            position: relative;
+        }
+
+        .content {
+            max-width: 650px;
+            width: 100%;
+            z-index: 2;
+        }
+
+        /* FLOATING HEARTS */
 
         .heart {
             position: fixed;
-            bottom: -20px;
+            bottom: -30px;
             color: #ff4d6d;
             font-size: 20px;
-            animation: float 6s linear infinite;
+            animation: float 7s linear infinite;
             opacity: 0.7;
             z-index: 1;
+            pointer-events: none;
         }
 
         @keyframes float {
+
             0% {
                 transform: translateY(0) rotate(0deg);
                 opacity: 0;
@@ -43,57 +65,32 @@
             }
 
             100% {
-                transform: translateY(-100vh) rotate(360deg);
+                transform: translateY(-110vh) rotate(360deg);
                 opacity: 0;
             }
         }
 
-        /* Sections */
-
-        section {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 30px 20px;
-            position: relative;
-        }
-
-        .content {
-            max-width: 600px;
-            z-index: 2;
-        }
-
-        /* Opening */
+        /* HOME */
 
         #home {
             background:
-                radial-gradient(circle at center,
+            radial-gradient(
+                circle,
                 #5c001f 0%,
-                #30000f 40%,
-                #160008 100%);
-        }
-
-        .small-text {
-            font-size: 18px;
-            color: #ffb3c1;
-            margin-bottom: 20px;
-        }
-
-        h1 {
-            font-size: 45px;
-            color: #ff6b81;
-            margin-bottom: 20px;
+                #30000f 42%,
+                #160008 100%
+            );
         }
 
         .main-heart {
-            font-size: 80px;
+            font-size: 75px;
             animation: heartbeat 1.5s infinite;
+            margin-bottom: 10px;
         }
 
         @keyframes heartbeat {
-            0%, 100% {
+
+            0%,100% {
                 transform: scale(1);
             }
 
@@ -102,23 +99,43 @@
             }
         }
 
+        .small-text {
+            font-size: 19px;
+            color: #ffb3c1;
+            margin-bottom: 16px;
+        }
+
+        h1 {
+            font-size: 44px;
+            color: #ff6b81;
+            line-height: 1.2;
+            margin-bottom: 18px;
+        }
+
+        .message {
+            font-size: 19px;
+            line-height: 1.7;
+            color: #ffd9df;
+            margin-top: 20px;
+        }
+
         button {
-            margin-top: 30px;
-            padding: 14px 28px;
+            margin-top: 28px;
+            padding: 14px 27px;
             border: none;
             border-radius: 30px;
             background: #ff416c;
             color: white;
             font-size: 16px;
             cursor: pointer;
-            box-shadow: 0 0 20px #ff416c;
+            box-shadow: 0 0 20px rgba(255,65,108,0.7);
         }
 
         button:hover {
             transform: scale(1.05);
         }
 
-        /* Birthday */
+        /* BIRTHDAY */
 
         #birthday {
             background: #22000d;
@@ -127,97 +144,136 @@
         .date {
             font-size: 22px;
             color: #ffb3c1;
-            margin-bottom: 15px;
+            margin-bottom: 14px;
         }
 
-        .birthday-title {
-            font-size: 42px;
+        h2 {
+            font-size: 36px;
             color: #ff6b81;
+            line-height: 1.25;
         }
 
-        .message {
-            font-size: 20px;
-            line-height: 1.7;
-            color: #ffd9df;
-            margin-top: 20px;
-        }
-
-        /* Photos */
+        /* MEMORIES */
 
         #memories {
             background: #180009;
-            flex-direction: column;
+            display: block;
+            padding-top: 70px;
+            padding-bottom: 70px;
         }
 
-        .photo-box {
-            margin-top: 35px;
-            width: 280px;
-            background: #fff;
-            padding: 10px 10px 20px;
-            transform: rotate(-2deg);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        .memory {
+            max-width: 340px;
+            margin: 35px auto 0;
+
+            background: white;
+
+            padding: 10px 10px 18px;
+
+            box-shadow:
+                0 10px 30px rgba(0,0,0,0.5);
+
+            border-radius: 3px;
         }
 
-        .photo-box img {
+        .memory:nth-child(odd) {
+            transform: rotate(-1.5deg);
+        }
+
+        .memory:nth-child(even) {
+            transform: rotate(1.5deg);
+        }
+
+        .memory img {
+            display: block;
+
             width: 100%;
-            height: 300px;
+
+            height: auto;
+
+            max-height: 470px;
+
             object-fit: cover;
         }
 
         .caption {
             color: #333;
+
             font-size: 16px;
+
+            line-height: 1.45;
+
             margin-top: 12px;
         }
 
-        /* Letter */
+        /* LOVE LETTER */
 
         #letter {
             background:
-                radial-gradient(circle,
+            radial-gradient(
+                circle,
                 #4d001a,
-                #160008 70%);
+                #160008 70%
+            );
         }
 
         .letter {
             background: rgba(255,255,255,0.08);
+
             border: 1px solid rgba(255,255,255,0.15);
+
             border-radius: 20px;
-            padding: 30px;
-            line-height: 1.8;
+
+            padding: 28px;
+
+            line-height: 1.85;
+
             font-size: 18px;
+
             color: #ffe6eb;
-            box-shadow: 0 0 30px rgba(255,65,108,0.2);
+
+            box-shadow:
+                0 0 30px rgba(255,65,108,0.2);
+
+            margin-top: 25px;
+
+            text-align: left;
         }
 
-        /* Final */
+        /* FINAL */
 
         #final {
             background: #0e0005;
         }
 
         .final-text {
-            font-size: 35px;
+            font-size: 34px;
+
             color: #ff6b81;
+
             line-height: 1.4;
         }
 
         .love {
-            margin-top: 25px;
-            font-size: 24px;
+            margin-top: 24px;
+
+            font-size: 22px;
+
+            line-height: 1.7;
+
             color: #ffd1da;
         }
 
-        /* Mobile */
+        /* MOBILE */
 
-        @media (max-width: 600px) {
+        @media(max-width:600px) {
 
             h1 {
                 font-size: 34px;
             }
 
-            .birthday-title {
-                font-size: 32px;
+            h2 {
+                font-size: 30px;
             }
 
             .final-text {
@@ -227,18 +283,45 @@
             .message {
                 font-size: 17px;
             }
+
+            .memory {
+                max-width: 330px;
+            }
         }
+
     </style>
 </head>
 
+
 <body>
 
-    <!-- Floating Hearts -->
-    <div class="heart" style="left:10%; animation-delay:0s;">❤️</div>
-    <div class="heart" style="left:25%; animation-delay:2s;">💕</div>
-    <div class="heart" style="left:45%; animation-delay:4s;">❤️</div>
-    <div class="heart" style="left:65%; animation-delay:1s;">💗</div>
-    <div class="heart" style="left:85%; animation-delay:3s;">❤️</div>
+
+    <!-- FLOATING HEARTS -->
+
+    <div class="heart"
+         style="left:8%; animation-delay:0s;">
+        ❤️
+    </div>
+
+    <div class="heart"
+         style="left:24%; animation-delay:2s;">
+        💕
+    </div>
+
+    <div class="heart"
+         style="left:44%; animation-delay:4s;">
+        ❤️
+    </div>
+
+    <div class="heart"
+         style="left:64%; animation-delay:1s;">
+        💗
+    </div>
+
+    <div class="heart"
+         style="left:84%; animation-delay:3s;">
+        ❤️
+    </div>
 
 
     <!-- HOME -->
@@ -247,7 +330,9 @@
 
         <div class="content">
 
-            <div class="main-heart">❤️</div>
+            <div class="main-heart">
+                ❤️
+            </div>
 
             <p class="small-text">
                 Hey Varam...
@@ -263,8 +348,11 @@
                 deserves a little surprise.
             </p>
 
-            <button onclick="openSurprise()">
+            <button
+                onclick="openSurprise()">
+
                 Open My Surprise 💌
+
             </button>
 
         </div>
@@ -282,16 +370,21 @@
                 October 1 🎂
             </p>
 
-            <h2 class="birthday-title">
+            <h2>
                 Happy Birthday,<br>
                 My Beautiful Varam ❤️
             </h2>
 
             <p class="message">
+
                 Today is your day...
-                but honestly, I'm just happy
+
+                <br><br>
+
+                But honestly, I'm just happy
                 that someone as beautiful as you
                 exists in my world. ❤️
+
             </p>
 
         </div>
@@ -305,25 +398,93 @@
 
         <div class="content">
 
-            <h2 class="birthday-title">
+            <h2>
                 Our Little Memories ❤️
             </h2>
 
             <p class="message">
+
                 Every picture has a memory.
+
+                <br>
+
                 And every memory with you
                 has a special place in my heart.
+
             </p>
+
 
             <!-- PHOTO 1 -->
 
-            <div class="photo-box">
+            <div class="memory">
 
-                <img src="photo1.jpg" alt="Varam">
+                <img
+                    src="photo1.jpg"
+                    alt="Varam">
 
                 <p class="caption">
-                    Some pictures capture a moment...
-                    but this one captures a feeling. ❤️
+
+                    Somehow, you make even
+                    a simple moment look beautiful. ❤️
+
+                </p>
+
+            </div>
+
+
+            <!-- PHOTO 2 -->
+
+            <div class="memory">
+
+                <img
+                    src="photo2.jpg"
+                    alt="Our hands">
+
+                <p class="caption">
+
+                    Two hands, one little promise...
+                    and a thousand feelings. ❤️
+
+                </p>
+
+            </div>
+
+
+            <!-- PHOTO 3 -->
+
+            <div class="memory">
+
+                <img
+                    src="photo3.jpg"
+                    alt="Us together">
+
+                <p class="caption">
+
+                    My favorite place has always been
+                    somewhere close to you. 🫶
+
+                </p>
+
+            </div>
+
+
+            <!-- PHOTO 4 -->
+
+            <div class="memory">
+
+                <img
+                    src="photo4.jpg"
+                    alt="Us together">
+
+                <p class="caption">
+
+                    Maybe the best memories aren't
+                    about where we are...
+
+                    <br>
+
+                    They're simply about being together. ❤️
+
                 </p>
 
             </div>
@@ -339,9 +500,10 @@
 
         <div class="content">
 
-            <h2 class="birthday-title">
+            <h2>
                 A Little Letter For You 💌
             </h2>
+
 
             <div class="letter">
 
@@ -349,8 +511,8 @@
 
                 <br><br>
 
-                I don't need a special reason to tell you
-                how much you mean to me.
+                I don't need a special reason
+                to tell you how much you mean to me.
 
                 <br><br>
 
@@ -362,17 +524,21 @@
                 <br><br>
 
                 Your smile, your presence,
-                your little ways of being you...
-                they all make you incredibly special to me.
+                and all the little things
+                that make you <i>you</i>
+                make you incredibly special to me.
 
                 <br><br>
 
                 I hope this new year of your life
-                brings you countless reasons to smile.
+                brings you countless reasons to smile,
+                beautiful moments to remember,
+                and all the happiness your heart deserves.
 
                 <br><br>
 
-                Happy Birthday, my beautiful Varam. ❤️
+                Happy Birthday,
+                my beautiful Varam. ❤️
 
             </div>
 
@@ -392,15 +558,24 @@
             </div>
 
             <h2 class="final-text">
+
                 Happy Birthday,<br>
                 My Beautiful Varam ❤️
+
             </h2>
 
             <p class="love">
+
                 Keep smiling.<br>
+
                 Keep shining.<br>
+
                 And always remember...
+
+                <br>
+
                 you are loved. ❤️
+
             </p>
 
         </div>
@@ -408,11 +583,14 @@
     </section>
 
 
+    <!-- JAVASCRIPT -->
+
     <script>
 
         function openSurprise() {
 
-            document.getElementById("birthday")
+            document
+                .getElementById("birthday")
                 .scrollIntoView({
                     behavior: "smooth"
                 });
@@ -420,6 +598,7 @@
         }
 
     </script>
+
 
 </body>
 </html>
