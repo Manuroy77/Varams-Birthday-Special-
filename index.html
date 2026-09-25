@@ -1,1022 +1,946 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Happy Birthday Varam ❤️</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Georgia,serif;
+    background:#160008;
+    color:white;
+    overflow-x:hidden;
+}
+
+section{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:35px 20px;
+    position:relative;
+}
+
+.content{
+    max-width:650px;
+    width:100%;
+    z-index:2;
+}
+
+
+/* FLOATING HEARTS */
+
+.heart{
+    position:fixed;
+    bottom:-30px;
+    color:#ff4d6d;
+    font-size:20px;
+    animation:float 7s linear infinite;
+    opacity:.7;
+    z-index:1;
+    pointer-events:none;
+}
+
+@keyframes float{
+
+    0%{
+        transform:translateY(0) rotate(0);
+        opacity:0;
+    }
+
+    20%{
+        opacity:1;
+    }
+
+    100%{
+        transform:translateY(-110vh) rotate(360deg);
+        opacity:0;
+    }
+}
+
+
+/* HEART */
+
+.main-heart{
+    font-size:75px;
+    animation:heartbeat 1.5s infinite;
+    margin-bottom:15px;
+}
+
+@keyframes heartbeat{
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+    0%,100%{
+        transform:scale(1);
+    }
 
-    <title>Happy Birthday Varam ❤️</title>
+    50%{
+        transform:scale(1.15);
+    }
+}
 
 
-    <style>
+/* HOME */
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+#home{
 
+    background:
+    radial-gradient(
+        circle,
+        #650021 0%,
+        #350010 45%,
+        #160008 100%
+    );
+}
 
-        html {
-            scroll-behavior: smooth;
-        }
+.small-text{
+    font-size:19px;
+    color:#ffb3c1;
+    margin-bottom:15px;
+}
 
+h1{
+    font-size:44px;
+    color:#ff6b81;
+    line-height:1.2;
+    margin-bottom:20px;
+}
 
-        body {
-            font-family: Georgia, serif;
-            background: #160008;
-            color: white;
-            overflow-x: hidden;
-        }
+.message{
+    font-size:19px;
+    line-height:1.7;
+    color:#ffd9df;
+    margin-top:20px;
+}
 
+button{
+    margin-top:30px;
+    padding:14px 28px;
+    border:none;
+    border-radius:30px;
+    background:#ff416c;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
 
-        /* =========================
-           FLOATING HEARTS
-        ========================= */
+    box-shadow:
+    0 0 20px rgba(255,65,108,.7);
 
-        .heart {
-            position: fixed;
-            bottom: -30px;
-            color: #ff4d6d;
-            font-size: 20px;
-            animation: float 7s linear infinite;
-            opacity: 0.7;
-            z-index: 1;
-            pointer-events: none;
-        }
+    transition:.3s;
+}
 
+button:hover{
+    transform:scale(1.08);
+}
 
-        @keyframes float {
 
-            0% {
-                transform: translateY(0) rotate(0deg);
-                opacity: 0;
-            }
+/* BIRTHDAY */
 
-            20% {
-                opacity: 1;
-            }
+#birthday{
+    background:#22000d;
+}
 
-            100% {
-                transform: translateY(-110vh) rotate(360deg);
-                opacity: 0;
-            }
-        }
+.date{
+    font-size:23px;
+    color:#ffb3c1;
+    margin-bottom:15px;
+}
 
+h2{
+    font-size:36px;
+    color:#ff6b81;
+    line-height:1.3;
+}
 
-        /* =========================
-           COMMON
-        ========================= */
 
-        section {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 35px 20px;
-            position: relative;
-        }
+/* MEMORIES */
 
+#memories{
 
-        .content {
-            max-width: 650px;
-            width: 100%;
-            z-index: 2;
-        }
+    background:#180009;
 
+    display:block;
 
-        /* =========================
-           HEART
-        ========================= */
+    padding-top:80px;
+    padding-bottom:80px;
+}
 
-        .main-heart {
-            font-size: 75px;
-            animation: heartbeat 1.5s infinite;
-            margin-bottom: 15px;
-        }
+.memory{
 
+    max-width:340px;
 
-        @keyframes heartbeat {
+    margin:40px auto;
 
-            0%, 100% {
-                transform: scale(1);
-            }
-
-            50% {
-                transform: scale(1.15);
-            }
-        }
+    background:white;
 
+    padding:10px 10px 18px;
 
-        /* =========================
-           HOME
-        ========================= */
+    box-shadow:
+    0 10px 35px rgba(0,0,0,.6);
 
-        #home {
+    border-radius:3px;
 
-            background:
-            radial-gradient(
-                circle,
-                #650021 0%,
-                #350010 45%,
-                #160008 100%
-            );
-        }
+    transition:.4s;
+}
 
+.memory:hover{
+    transform:scale(1.03) rotate(0deg);
+}
 
-        .small-text {
-            font-size: 19px;
-            color: #ffb3c1;
-            margin-bottom: 15px;
-        }
+.memory:nth-child(even){
+    transform:rotate(1.5deg);
+}
 
+.memory:nth-child(odd){
+    transform:rotate(-1.5deg);
+}
 
-        h1 {
-            font-size: 44px;
-            color: #ff6b81;
-            line-height: 1.2;
-            margin-bottom: 20px;
-        }
+.memory img{
 
+    display:block;
 
-        .message {
-            font-size: 19px;
-            line-height: 1.7;
-            color: #ffd9df;
-            margin-top: 20px;
-        }
+    width:100%;
 
+    height:auto;
 
-        button {
-            margin-top: 30px;
-            padding: 14px 28px;
-            border: none;
-            border-radius: 30px;
-            background: #ff416c;
-            color: white;
-            font-size: 16px;
-            cursor: pointer;
-            box-shadow: 0 0 20px rgba(255,65,108,0.7);
-            transition: 0.3s;
-        }
+    max-height:470px;
 
+    object-fit:cover;
+}
 
-        button:hover {
-            transform: scale(1.08);
-        }
+.caption{
 
+    color:#333;
 
-        /* =========================
-           BIRTHDAY
-        ========================= */
+    font-size:16px;
 
-        #birthday {
-            background: #22000d;
-        }
+    line-height:1.5;
 
+    margin-top:13px;
 
-        .date {
-            font-size: 23px;
-            color: #ffb3c1;
-            margin-bottom: 15px;
-        }
+    padding:0 5px;
+}
 
 
-        h2 {
-            font-size: 36px;
-            color: #ff6b81;
-            line-height: 1.3;
-        }
+/* LOVE LETTER */
 
+#letter{
 
-        /* =========================
-           MAGIC INTRO SECTION
-        ========================= */
+    background:
+    radial-gradient(
+        circle,
+        #50001c,
+        #160008 70%
+    );
+}
 
-        #magic {
-            background:
-            radial-gradient(
-                circle,
-                #420016 0%,
-                #1c000b 50%,
-                #0b0004 100%
-            );
-        }
+.letter{
 
+    background:rgba(255,255,255,.08);
 
-        .magic-text {
-            color: #ffd1dc;
-            font-size: 18px;
-            line-height: 1.7;
-            margin-top: 20px;
-        }
+    border:
+    1px solid
+    rgba(255,255,255,.15);
 
+    border-radius:20px;
 
-        .magic-button {
+    padding:30px;
 
-            margin-top: 28px;
+    line-height:1.85;
 
-            padding: 16px 32px;
+    font-size:18px;
 
-            border: none;
+    color:#ffe6eb;
 
-            border-radius: 50px;
+    box-shadow:
+    0 0 30px rgba(255,65,108,.25);
 
-            background:
-            linear-gradient(
-                45deg,
-                #ff174f,
-                #ff5c8a
-            );
+    margin-top:25px;
 
-            color: white;
+    text-align:left;
+}
 
-            font-size: 17px;
 
-            box-shadow:
-                0 0 15px #ff174f,
-                0 0 40px rgba(255,23,79,0.5);
+/* FINAL MESSAGE */
 
-            animation: magicPulse 1.8s infinite;
-        }
+#final{
 
+    background:#0e0005;
+}
 
-        @keyframes magicPulse {
+.final-text{
 
-            0%, 100% {
-                transform: scale(1);
-            }
+    font-size:35px;
 
-            50% {
-                transform: scale(1.06);
-            }
-        }
+    color:#ff6b81;
 
+    line-height:1.4;
+}
 
-        /* =========================
-           MEMORIES
-        ========================= */
+.love{
 
-        #memories {
+    margin-top:25px;
 
-            background: #180009;
+    font-size:22px;
 
-            display: block;
+    line-height:1.8;
 
-            padding-top: 80px;
+    color:#ffd1da;
+}
 
-            padding-bottom: 80px;
-        }
 
+/* ==================================================
+   MAGIC BUTTON SECTION
+================================================== */
 
-        .memory {
+#magic{
 
-            max-width: 340px;
+    background:
+    radial-gradient(
+        circle,
+        #420016,
+        #1c000b 50%,
+        #090003 100%
+    );
+}
 
-            margin: 40px auto;
+.magic-text{
 
-            background: white;
+    color:#ffd1dc;
 
-            padding: 10px 10px 18px;
+    font-size:18px;
 
-            box-shadow:
-                0 10px 35px rgba(0,0,0,0.6);
+    line-height:1.7;
 
-            border-radius: 3px;
+    margin-top:20px;
+}
 
-            transition: 0.4s;
-        }
+.magic-button{
 
+    margin-top:28px;
 
-        .memory:hover {
+    padding:16px 32px;
 
-            transform:
-                scale(1.03)
-                rotate(0deg);
-        }
+    border:none;
 
+    border-radius:50px;
 
-        .memory:nth-child(even) {
+    background:
+    linear-gradient(
+        45deg,
+        #ff174f,
+        #ff5c8a
+    );
 
-            transform: rotate(1.5deg);
-        }
+    color:white;
 
+    font-size:17px;
 
-        .memory:nth-child(odd) {
+    box-shadow:
+    0 0 15px #ff174f,
+    0 0 40px rgba(255,23,79,.5);
 
-            transform: rotate(-1.5deg);
-        }
+    animation:magicPulse 1.8s infinite;
+}
 
+@keyframes magicPulse{
 
-        .memory img {
+    0%,100%{
+        transform:scale(1);
+    }
 
-            display: block;
+    50%{
+        transform:scale(1.06);
+    }
+}
 
-            width: 100%;
 
-            height: auto;
+/* ==================================================
+   FULL SCREEN MAGIC
+================================================== */
 
-            max-height: 470px;
+.magic-screen{
 
-            object-fit: cover;
-        }
+    position:fixed;
 
+    inset:0;
 
-        .caption {
+    width:100%;
+    height:100%;
 
-            color: #333;
+    background:
+    radial-gradient(
+        circle at center,
+        #ff174f 0%,
+        #720020 18%,
+        #25000d 45%,
+        #050002 100%
+    );
 
-            font-size: 16px;
+    z-index:99999;
 
-            line-height: 1.5;
+    display:none;
 
-            margin-top: 13px;
+    overflow:hidden;
+}
 
-            padding: 0 5px;
-        }
 
+/* LIGHT BURST */
 
-        /* =========================
-           LOVE LETTER
-        ========================= */
+.light-burst{
 
-        #letter {
+    position:absolute;
 
-            background:
-            radial-gradient(
-                circle,
-                #50001c,
-                #160008 70%
-            );
-        }
+    left:50%;
+    top:50%;
 
+    width:10px;
+    height:10px;
 
-        .letter {
+    transform:
+    translate(-50%,-50%);
 
-            background:
-                rgba(255,255,255,0.08);
+    border-radius:50%;
 
-            border:
-                1px solid
-                rgba(255,255,255,0.15);
+    background:white;
 
-            border-radius: 20px;
+    box-shadow:
+    0 0 20px white,
+    0 0 60px #ff4d6d,
+    0 0 120px #ff174f,
+    0 0 200px #ff8fab;
 
-            padding: 30px;
+    animation:burst 2.2s ease-out forwards;
+}
 
-            line-height: 1.85;
+@keyframes burst{
 
-            font-size: 18px;
+    0%{
+        width:10px;
+        height:10px;
+        opacity:1;
+    }
 
-            color: #ffe6eb;
+    100%{
+        width:250vw;
+        height:250vw;
+        opacity:0;
+    }
+}
 
-            box-shadow:
-                0 0 30px
-                rgba(255,65,108,0.25);
 
-            margin-top: 25px;
+/* LIGHT RAYS */
 
-            text-align: left;
-        }
+.ray{
 
+    position:absolute;
 
-        /* =========================
-           FINAL
-        ========================= */
+    left:50%;
+    top:50%;
 
-        #final {
-            background: #0e0005;
-        }
+    width:3px;
+    height:0;
 
+    background:
+    linear-gradient(
+        transparent,
+        rgba(255,255,255,.9),
+        transparent
+    );
 
-        .final-text {
+    transform-origin:center;
 
-            font-size: 35px;
+    opacity:0;
 
-            color: #ff6b81;
+    animation:
+    rayAppear 2s ease-out forwards;
+}
 
-            line-height: 1.4;
-        }
+.ray1{
+    transform:
+    translate(-50%,-50%) rotate(0deg);
+}
 
+.ray2{
+    transform:
+    translate(-50%,-50%) rotate(30deg);
+}
 
-        .love {
+.ray3{
+    transform:
+    translate(-50%,-50%) rotate(60deg);
+}
 
-            margin-top: 25px;
+.ray4{
+    transform:
+    translate(-50%,-50%) rotate(90deg);
+}
 
-            font-size: 22px;
+.ray5{
+    transform:
+    translate(-50%,-50%) rotate(120deg);
+}
 
-            line-height: 1.8;
+.ray6{
+    transform:
+    translate(-50%,-50%) rotate(150deg);
+}
 
-            color: #ffd1da;
-        }
+@keyframes rayAppear{
 
+    0%{
+        opacity:0;
+        height:0;
+    }
 
-        /* =================================================
-           MAGIC FULL SCREEN
-        ================================================= */
+    50%{
+        opacity:.8;
+    }
 
-        .magic-screen {
+    100%{
+        opacity:.15;
+        height:120vh;
+    }
+}
 
-            position: fixed;
 
-            inset: 0;
+/* CENTER HEART */
 
-            width: 100%;
-            height: 100%;
+.magic-heart{
 
-            background:
-            radial-gradient(
-                circle at center,
-                #ff174f 0%,
-                #720020 18%,
-                #25000d 45%,
-                #050002 100%
-            );
+    position:absolute;
 
-            z-index: 99999;
+    left:50%;
+    top:50%;
 
-            display: none;
+    transform:
+    translate(-50%,-50%)
+    scale(0);
 
-            overflow: hidden;
-        }
+    font-size:80px;
 
+    filter:
+    drop-shadow(0 0 20px #ff174f)
+    drop-shadow(0 0 50px #ff4d6d)
+    drop-shadow(0 0 90px #ff174f);
 
-        /* LIGHT BURST */
+    z-index:10;
 
-        .light-burst {
+    animation:
+    magicHeart 2.2s ease-in-out forwards;
+}
 
-            position: absolute;
+@keyframes magicHeart{
 
-            left: 50%;
-            top: 50%;
+    0%{
+        transform:
+        translate(-50%,-50%)
+        scale(0);
 
-            width: 10px;
-            height: 10px;
+        opacity:0;
+    }
 
-            transform:
-                translate(-50%, -50%);
+    50%{
+        transform:
+        translate(-50%,-50%)
+        scale(1.5);
 
-            border-radius: 50%;
+        opacity:1;
+    }
 
-            background: white;
+    100%{
+        transform:
+        translate(-50%,-50%)
+        scale(1);
 
-            box-shadow:
-                0 0 20px white,
-                0 0 60px #ff4d6d,
-                0 0 120px #ff174f,
-                0 0 200px #ff8fab;
+        opacity:1;
+    }
+}
 
-            animation:
-                burst 2.2s ease-out forwards;
-        }
 
+/* ==================================================
+   MAGIC PHOTOS
+================================================== */
 
-        @keyframes burst {
+.magic-photo{
 
-            0% {
+    position:absolute;
 
-                width: 10px;
-                height: 10px;
+    width:145px;
 
-                opacity: 1;
-            }
+    padding:6px;
 
-            100% {
+    background:white;
 
-                width: 250vw;
-                height: 250vw;
+    box-shadow:
+    0 0 20px white,
+    0 0 45px #ff4d6d,
+    0 0 80px rgba(255,23,79,.7);
 
-                opacity: 0;
-            }
-        }
+    opacity:0;
 
+    z-index:5;
 
-        /* RAYS */
+    border-radius:3px;
+}
 
-        .ray {
+.magic-photo img{
 
-            position: absolute;
+    display:block;
 
-            left: 50%;
-            top: 50%;
+    width:100%;
 
-            width: 3px;
-            height: 100vh;
+    height:190px;
 
-            background:
-                linear-gradient(
-                    transparent,
-                    rgba(255,255,255,0.9),
-                    transparent
-                );
+    object-fit:cover;
+}
 
-            transform-origin: center;
 
-            opacity: 0;
+/* PHOTO 1 */
 
-            animation:
-                rayAppear 2s ease-out forwards;
-        }
+.magic-photo-one{
 
+    left:5%;
+    top:10%;
 
-        .ray1 {
-            transform: translate(-50%,-50%) rotate(0deg);
-        }
+    transform:rotate(-12deg);
 
-        .ray2 {
-            transform: translate(-50%,-50%) rotate(30deg);
-        }
+    animation:
+    photoOne 7s ease-in-out
+    1s forwards;
+}
 
-        .ray3 {
-            transform: translate(-50%,-50%) rotate(60deg);
-        }
 
-        .ray4 {
-            transform: translate(-50%,-50%) rotate(90deg);
-        }
+/* PHOTO 2 */
 
-        .ray5 {
-            transform: translate(-50%,-50%) rotate(120deg);
-        }
+.magic-photo-two{
 
-        .ray6 {
-            transform: translate(-50%,-50%) rotate(150deg);
-        }
+    right:5%;
+    top:10%;
 
+    transform:rotate(11deg);
 
-        @keyframes rayAppear {
+    animation:
+    photoTwo 7s ease-in-out
+    1.4s forwards;
+}
 
-            0% {
-                opacity: 0;
-                height: 0;
-            }
 
-            50% {
-                opacity: 0.8;
-            }
+/* PHOTO 3 */
 
-            100% {
-                opacity: 0.15;
-                height: 120vh;
-            }
-        }
+.magic-photo-three{
 
+    left:5%;
+    bottom:9%;
 
-        /* CENTER HEART */
+    transform:rotate(9deg);
 
-        .magic-heart {
+    animation:
+    photoThree 7s ease-in-out
+    1.8s forwards;
+}
 
-            position: absolute;
 
-            left: 50%;
-            top: 50%;
+/* PHOTO 4 */
 
-            transform:
-                translate(-50%,-50%)
-                scale(0);
+.magic-photo-four{
 
-            font-size: 80px;
+    right:5%;
+    bottom:9%;
 
-            filter:
-                drop-shadow(0 0 20px #ff174f)
-                drop-shadow(0 0 50px #ff4d6d)
-                drop-shadow(0 0 90px #ff174f);
+    transform:rotate(-10deg);
 
-            z-index: 10;
+    animation:
+    photoFour 7s ease-in-out
+    2.2s forwards;
+}
 
-            animation:
-                magicHeart 2.2s ease-in-out forwards;
-        }
 
+@keyframes photoOne{
 
-        @keyframes magicHeart {
+    0%{
+        opacity:0;
 
-            0% {
+        transform:
+        translate(-150px,-150px)
+        scale(.2)
+        rotate(-40deg);
+    }
 
-                transform:
-                    translate(-50%,-50%)
-                    scale(0);
+    25%{
+        opacity:1;
+    }
 
-                opacity: 0;
-            }
+    100%{
+        opacity:1;
 
-            50% {
+        transform:
+        translate(0,0)
+        scale(1)
+        rotate(-12deg);
+    }
+}
 
-                transform:
-                    translate(-50%,-50%)
-                    scale(1.5);
 
-                opacity: 1;
-            }
+@keyframes photoTwo{
 
-            100% {
+    0%{
+        opacity:0;
 
-                transform:
-                    translate(-50%,-50%)
-                    scale(1);
+        transform:
+        translate(150px,-150px)
+        scale(.2)
+        rotate(40deg);
+    }
 
-                opacity: 1;
-            }
-        }
+    25%{
+        opacity:1;
+    }
 
+    100%{
+        opacity:1;
 
-        /* MAGIC PHOTOS */
+        transform:
+        translate(0,0)
+        scale(1)
+        rotate(11deg);
+    }
+}
 
-        .magic-photo {
 
-            position: absolute;
+@keyframes photoThree{
 
-            width: 145px;
+    0%{
+        opacity:0;
 
-            padding: 6px;
+        transform:
+        translate(-150px,150px)
+        scale(.2)
+        rotate(40deg);
+    }
 
-            background: white;
+    25%{
+        opacity:1;
+    }
 
-            box-shadow:
-                0 0 20px white,
-                0 0 45px #ff4d6d,
-                0 0 80px rgba(255,23,79,0.7);
+    100%{
+        opacity:1;
 
-            opacity: 0;
+        transform:
+        translate(0,0)
+        scale(1)
+        rotate(9deg);
+    }
+}
 
-            z-index: 5;
 
-            border-radius: 3px;
-        }
+@keyframes photoFour{
 
+    0%{
+        opacity:0;
 
-        .magic-photo img {
+        transform:
+        translate(150px,150px)
+        scale(.2)
+        rotate(-40deg);
+    }
 
-            display: block;
+    25%{
+        opacity:1;
+    }
 
-            width: 100%;
+    100%{
+        opacity:1;
 
-            height: 190px;
+        transform:
+        translate(0,0)
+        scale(1)
+        rotate(-10deg);
+    }
+}
 
-            object-fit: cover;
-        }
 
+/* SPARKLES */
 
-        .magic-photo:nth-of-type(8) {
+.sparkle{
 
-            left: 6%;
-            top: 12%;
+    position:absolute;
 
-            transform: rotate(-12deg);
+    color:white;
 
-            animation:
-                photoMagic1 7s ease-in-out
-                1s forwards;
-        }
+    font-size:22px;
 
+    z-index:8;
 
-        .magic-photo:nth-of-type(9) {
+    animation:
+    sparkle 1.5s infinite alternate;
+}
 
-            right: 6%;
-            top: 12%;
+@keyframes sparkle{
 
-            transform: rotate(11deg);
+    from{
+        opacity:.2;
+        transform:scale(.5);
+    }
 
-            animation:
-                photoMagic2 7s ease-in-out
-                1.4s forwards;
-        }
+    to{
+        opacity:1;
+        transform:scale(1.5);
+    }
+}
 
 
-        .magic-photo:nth-of-type(10) {
+/* MAGIC MESSAGE */
 
-            left: 6%;
-            bottom: 10%;
+.magic-message{
 
-            transform: rotate(9deg);
+    position:absolute;
 
-            animation:
-                photoMagic3 7s ease-in-out
-                1.8s forwards;
-        }
+    left:50%;
+    top:50%;
 
+    width:90%;
 
-        .magic-photo:nth-of-type(11) {
+    transform:
+    translate(-50%,-50%)
+    scale(.7);
 
-            right: 6%;
-            bottom: 10%;
+    text-align:center;
 
-            transform: rotate(-10deg);
+    color:white;
 
-            animation:
-                photoMagic4 7s ease-in-out
-                2.2s forwards;
-        }
+    font-size:23px;
 
+    line-height:1.6;
 
-        @keyframes photoMagic1 {
+    opacity:0;
 
-            0% {
+    z-index:20;
 
-                opacity: 0;
+    text-shadow:
+    0 0 15px #ff4d6d,
+    0 0 35px #ff174f;
 
-                transform:
-                    translate(-100px,-100px)
-                    scale(0.2)
-                    rotate(-40deg);
-            }
+    animation:
+    magicMessage 3s ease forwards;
 
-            25% {
-                opacity: 1;
-            }
+    animation-delay:4.5s;
+}
 
-            100% {
+.magic-message small{
 
-                opacity: 1;
+    font-size:17px;
 
-                transform:
-                    translate(0,0)
-                    scale(1)
-                    rotate(-12deg);
-            }
-        }
+    color:#ffd1dc;
+}
 
+@keyframes magicMessage{
 
-        @keyframes photoMagic2 {
+    from{
+        opacity:0;
 
-            0% {
+        transform:
+        translate(-50%,-50%)
+        scale(.7);
+    }
 
-                opacity: 0;
+    to{
+        opacity:1;
 
-                transform:
-                    translate(100px,-100px)
-                    scale(0.2)
-                    rotate(40deg);
-            }
+        transform:
+        translate(-50%,-50%)
+        scale(1);
+    }
+}
 
-            25% {
-                opacity: 1;
-            }
 
-            100% {
+/* CLOSE */
 
-                opacity: 1;
+.close-magic{
 
-                transform:
-                    translate(0,0)
-                    scale(1)
-                    rotate(11deg);
-            }
-        }
+    position:absolute;
 
+    right:18px;
+    top:18px;
 
-        @keyframes photoMagic3 {
+    z-index:50;
 
-            0% {
+    margin:0;
 
-                opacity: 0;
+    padding:10px 16px;
 
-                transform:
-                    translate(-100px,100px)
-                    scale(0.2)
-                    rotate(40deg);
-            }
+    background:
+    rgba(255,255,255,.12);
 
-            25% {
-                opacity: 1;
-            }
+    box-shadow:none;
 
-            100% {
+    backdrop-filter:blur(5px);
+}
 
-                opacity: 1;
 
-                transform:
-                    translate(0,0)
-                    scale(1)
-                    rotate(9deg);
-            }
-        }
+/* MOBILE */
 
+@media(max-width:600px){
 
-        @keyframes photoMagic4 {
+    h1{
+        font-size:34px;
+    }
 
-            0% {
+    h2{
+        font-size:30px;
+    }
 
-                opacity: 0;
+    .final-text{
+        font-size:28px;
+    }
 
-                transform:
-                    translate(100px,100px)
-                    scale(0.2)
-                    rotate(-40deg);
-            }
+    .message{
+        font-size:17px;
+    }
 
-            25% {
-                opacity: 1;
-            }
+    .memory{
+        max-width:330px;
+    }
 
-            100% {
+    .letter{
+        font-size:16px;
+        padding:24px;
+    }
 
-                opacity: 1;
+    .magic-photo{
+        width:115px;
+    }
 
-                transform:
-                    translate(0,0)
-                    scale(1)
-                    rotate(-10deg);
-            }
-        }
+    .magic-photo img{
+        height:150px;
+    }
 
+    .magic-heart{
+        font-size:65px;
+    }
 
-        /* MAGIC SPARKLES */
+    .magic-message{
+        font-size:21px;
+    }
+}
 
-        .sparkle {
-
-            position: absolute;
-
-            color: white;
-
-            font-size: 22px;
-
-            z-index: 8;
-
-            animation:
-                sparkle 1.5s infinite alternate;
-        }
-
-
-        @keyframes sparkle {
-
-            from {
-
-                opacity: 0.2;
-
-                transform: scale(0.5);
-            }
-
-            to {
-
-                opacity: 1;
-
-                transform: scale(1.5);
-            }
-        }
-
-
-        /* MAGIC MESSAGE */
-
-        .magic-message {
-
-            position: absolute;
-
-            left: 50%;
-            top: 50%;
-
-            width: 90%;
-
-            transform:
-                translate(-50%,-50%)
-                scale(0.7);
-
-            text-align: center;
-
-            color: white;
-
-            font-size: 23px;
-
-            line-height: 1.6;
-
-            opacity: 0;
-
-            z-index: 20;
-
-            text-shadow:
-                0 0 15px #ff4d6d,
-                0 0 35px #ff174f;
-
-            animation:
-                magicMessage
-                3s ease forwards;
-
-            animation-delay: 4.5s;
-        }
-
-
-        .magic-message small {
-
-            font-size: 17px;
-
-            color: #ffd1dc;
-        }
-
-
-        @keyframes magicMessage {
-
-            from {
-
-                opacity: 0;
-
-                transform:
-                    translate(-50%,-50%)
-                    scale(0.7);
-            }
-
-            to {
-
-                opacity: 1;
-
-                transform:
-                    translate(-50%,-50%)
-                    scale(1);
-            }
-        }
-
-
-        /* MAGIC CLOSE */
-
-        .close-magic {
-
-            position: absolute;
-
-            right: 18px;
-            top: 18px;
-
-            z-index: 50;
-
-            margin: 0;
-
-            padding: 10px 16px;
-
-            background:
-                rgba(255,255,255,0.12);
-
-            box-shadow: none;
-
-            backdrop-filter: blur(5px);
-        }
-
-
-
-        /* =========================
-           MOBILE
-        ========================= */
-
-        @media(max-width:600px) {
-
-            h1 {
-                font-size: 34px;
-            }
-
-
-            h2 {
-                font-size: 30px;
-            }
-
-
-            .final-text {
-                font-size: 28px;
-            }
-
-
-            .message {
-                font-size: 17px;
-            }
-
-
-            .memory {
-                max-width: 330px;
-            }
-
-
-            .letter {
-                font-size: 16px;
-                padding: 24px;
-            }
-
-
-            .magic-photo {
-
-                width: 115px;
-            }
-
-
-            .magic-photo img {
-
-                height: 150px;
-            }
-
-
-            .magic-heart {
-
-                font-size: 65px;
-            }
-
-
-            .magic-message {
-
-                font-size: 21px;
-            }
-
-        }
-
-    </style>
+</style>
 
 </head>
 
@@ -1024,611 +948,573 @@
 <body>
 
 
-    <!-- FLOATING HEARTS -->
+<!-- FLOATING HEARTS -->
 
-    <div class="heart"
-         style="left:8%; animation-delay:0s;">
-        ❤️
-    </div>
+<div class="heart"
+style="left:8%;animation-delay:0s;">
+❤️
+</div>
 
-    <div class="heart"
-         style="left:25%; animation-delay:2s;">
-        💕
-    </div>
+<div class="heart"
+style="left:25%;animation-delay:2s;">
+💕
+</div>
 
-    <div class="heart"
-         style="left:45%; animation-delay:4s;">
-        💗
-    </div>
+<div class="heart"
+style="left:45%;animation-delay:4s;">
+💗
+</div>
 
-    <div class="heart"
-         style="left:65%; animation-delay:1s;">
-        ❤️
-    </div>
+<div class="heart"
+style="left:65%;animation-delay:1s;">
+❤️
+</div>
 
-    <div class="heart"
-         style="left:85%; animation-delay:3s;">
-        💕
-    </div>
+<div class="heart"
+style="left:85%;animation-delay:3s;">
+💕
+</div>
 
 
 
-    <!-- =========================
-         HOME
-    ========================= -->
+<!-- HOME -->
 
-    <section id="home">
+<section id="home">
 
-        <div class="content">
+<div class="content">
 
-            <div class="main-heart">
-                ❤️
-            </div>
+<div class="main-heart">
+❤️
+</div>
 
-            <p class="small-text">
-                Hey Varam...
-            </p>
+<p class="small-text">
+Hey Varam...
+</p>
 
-            <h1>
+<h1>
 
-                I made something
-                <br>
-                just for you. ❤️
+I made something
+<br>
+just for you. ❤️
 
-            </h1>
+</h1>
 
-            <p class="message">
+<p class="message">
 
-                Because someone as special as you
-                deserves a little surprise.
+Because someone as special as you
+deserves a little surprise.
 
-            </p>
+</p>
 
-            <button onclick="openSurprise()">
+<button onclick="openSurprise()">
 
-                Open My Surprise 💌
+Open My Surprise 💌
 
-            </button>
+</button>
 
-        </div>
+</div>
 
-    </section>
+</section>
 
 
 
-    <!-- =========================
-         BIRTHDAY
-    ========================= -->
+<!-- BIRTHDAY -->
 
-    <section id="birthday">
+<section id="birthday">
 
-        <div class="content">
+<div class="content">
 
-            <p class="date">
-                October 1 🎂
-            </p>
+<p class="date">
+October 1 🎂
+</p>
 
-            <h2>
+<h2>
 
-                Happy Birthday,
+Happy Birthday,
 
-                <br>
+<br>
 
-                My Beautiful Varam ❤️
+My Beautiful Varam ❤️
 
-            </h2>
+</h2>
 
-            <p class="message">
+<p class="message">
 
-                Today is your day...
+Today is your day...
 
-                <br><br>
+<br><br>
 
-                But honestly, I'm just happy
-                that someone as beautiful as you
-                exists in my world.
+But honestly, I'm just happy
+that someone as beautiful as you
+exists in my world.
 
-                ❤️
+❤️
 
-            </p>
+</p>
 
-        </div>
+</div>
 
-    </section>
+</section>
 
 
 
-    <!-- =========================
-         MAGIC BUTTON
-    ========================= -->
+<!-- MEMORIES -->
 
-    <section id="magic">
+<section id="memories">
 
-        <div class="content">
+<div class="content">
 
-            <div class="main-heart">
-                💗
-            </div>
+<h2>
+Our Little Memories ❤️
+</h2>
 
-            <h2>
-                Wait... ❤️
-            </h2>
+<p class="message">
 
-            <p class="magic-text">
+Every picture has a memory.
 
-                I have one more little surprise
-                waiting for you...
+<br>
 
-                <br><br>
+And every memory with you
+has a special place in my heart.
 
-                This one is a little magical. ✨
+</p>
 
-            </p>
 
-            <button
-                class="magic-button"
-                onclick="showMagic()">
+<!-- PHOTO 1 -->
 
-                ❤️ See The Magic
+<div class="memory">
 
-            </button>
+<img
+src="IMG-20260622-WA0004.jpg"
+alt="Varam">
 
-        </div>
+<p class="caption">
 
-    </section>
+Somehow, you make even
+a simple moment look beautiful.
 
-    <!-- =========================
-         MEMORIES
-    ========================= -->
+❤️
 
-    <section id="memories">
+</p>
 
-        <div class="content">
+</div>
 
-            <h2>
-                Our Little Memories ❤️
-            </h2>
 
-            <p class="message">
+<!-- PHOTO 2 -->
 
-                Every picture has a memory.
+<div class="memory">
 
-                <br>
+<img
+src="IMG-20260520-WA0005.jpg"
+alt="Our hands">
 
-                And every memory with you
-                has a special place in my heart.
+<p class="caption">
 
-            </p>
+Two hands, one little promise...
 
+<br>
 
+and a thousand feelings.
 
-            <!-- PHOTO 1 -->
+❤️
 
-            <div class="memory">
+</p>
 
-                <img
-                    src="IMG-20260622-WA0004.jpg"
-                    alt="Varam">
+</div>
 
-                <p class="caption">
 
-                    Somehow, you make even
-                    a simple moment look beautiful.
+<!-- PHOTO 3 -->
 
-                    ❤️
+<div class="memory">
 
-                </p>
+<img
+src="IMG-20260429-WA0001.jpg"
+alt="Us together">
 
-            </div>
+<p class="caption">
 
+My favorite place
+has always been
+somewhere close to you.
 
+🫶
 
-            <!-- PHOTO 2 -->
+</p>
 
-            <div class="memory">
+</div>
 
-                <img
-                    src="IMG-20260520-WA0005.jpg"
-                    alt="Our hands">
 
-                <p class="caption">
+<!-- PHOTO 4 -->
 
-                    Two hands, one little promise...
+<div class="memory">
 
-                    <br>
+<img
+src="IMG-20260521-WA0028.jpg"
+alt="Us together">
 
-                    and a thousand feelings.
+<p class="caption">
 
-                    ❤️
+Maybe the best memories
+aren't about where we are...
 
-                </p>
+<br><br>
 
-            </div>
+They're simply about
+being together.
 
+❤️
 
+</p>
 
-            <!-- PHOTO 3 -->
+</div>
 
-            <div class="memory">
+</div>
 
-                <img
-                    src="IMG-20260429-WA0001.jpg"
-                    alt="Us together">
+</section>
 
-                <p class="caption">
 
-                    My favorite place
-                    has always been
-                    somewhere close to you.
 
-                    🫶
+<!-- LOVE LETTER -->
 
-                </p>
+<section id="letter">
 
-            </div>
+<div class="content">
 
+<h2>
+A Little Letter For You 💌
+</h2>
 
+<div class="letter">
 
-            <!-- PHOTO 4 -->
+Varam,
 
-            <div class="memory">
+<br><br>
 
-                <img
-                    src="IMG-20260521-WA0028.jpg"
-                    alt="Us together">
+I don't need a special reason
+to tell you how much you mean
+to me.
 
-                <p class="caption">
+<br><br>
 
-                    Maybe the best memories
-                    aren't about where we are...
+But today, on your birthday,
+I just want you to know that
+having you in my life is something
+I'll always be grateful for.
 
-                    <br><br>
+<br><br>
 
-                    They're simply about
-                    being together.
+Your smile, your presence,
+and all the little things
+that make you <i>you</i>
+make you incredibly special
+to me.
 
-                    ❤️
+<br><br>
 
-                </p>
+I hope this new year of your life
+brings you countless reasons
+to smile, beautiful moments
+to remember, and all the happiness
+your heart deserves.
 
-            </div>
+<br><br>
 
-        </div>
+Happy Birthday,
 
-    </section>
+<br>
 
+my beautiful Varam. ❤️
 
+</div>
 
-    <!-- =========================
-         LOVE LETTER
-    ========================= -->
+</div>
 
-    <section id="letter">
+</section>
 
-        <div class="content">
 
-            <h2>
-                A Little Letter For You 💌
-            </h2>
 
-            <div class="letter">
+<!-- FINAL BIRTHDAY MESSAGE -->
 
-                Varam,
+<section id="final">
 
-                <br><br>
+<div class="content">
 
-                I don't need a special reason
-                to tell you how much you mean
-                to me.
+<div class="main-heart">
+❤️
+</div>
 
-                <br><br>
+<h2 class="final-text">
 
-                But today, on your birthday,
-                I just want you to know that
-                having you in my life is something
-                I'll always be grateful for.
+Happy Birthday,
 
-                <br><br>
+<br>
 
-                Your smile, your presence,
-                and all the little things
-                that make you <i>you</i>
-                make you incredibly special
-                to me.
+My Beautiful Varam ❤️
 
-                <br><br>
+</h2>
 
-                I hope this new year of your life
-                brings you countless reasons
-                to smile, beautiful moments
-                to remember, and all the happiness
-                your heart deserves.
+<p class="love">
 
-                <br><br>
+Keep smiling.
 
-                Happy Birthday,
+<br>
 
-                <br>
+Keep shining.
 
-                my beautiful Varam. ❤️
+<br>
 
-            </div>
+And always remember...
 
-        </div>
+<br><br>
 
-    </section>
+You are loved. ❤️
 
+</p>
 
+</div>
 
-    <!-- =========================
-         FINAL
-    ========================= -->
+</section>
 
-    <section id="final">
 
-        <div class="content">
 
-            <div class="main-heart">
-                ❤️
-            </div>
+<!-- ==================================================
+     FINAL MAGIC BUTTON
+================================================== -->
 
-            <h2 class="final-text">
+<section id="magic">
 
-                Happy Birthday,
+<div class="content">
 
-                <br>
+<div class="main-heart">
+💗
+</div>
 
-                My Beautiful Varam ❤️
+<h2>
+One Last Surprise... ❤️
+</h2>
 
-            </h2>
+<p class="magic-text">
 
-            <p class="love">
+You thought that was everything?
 
-                Keep smiling.
+<br><br>
 
-                <br>
+I saved one little bit of magic
+just for you. ✨
 
-                Keep shining.
+</p>
 
-                <br>
+<button
+class="magic-button"
+onclick="showMagic()">
 
-                And always remember...
+❤️ See The Magic
 
-                <br><br>
+</button>
 
-                You are loved. ❤️
+</div>
 
-            </p>
+</section>
 
-        </div>
 
-    </section>
 
+<!-- ==================================================
+     MAGIC FULL SCREEN
+================================================== -->
 
+<div
+class="magic-screen"
+id="magicScreen">
 
-    <!-- =================================================
-         MAGIC FULL SCREEN
-    ================================================= -->
 
-    <div
-        class="magic-screen"
-        id="magicScreen">
+<button
+class="close-magic"
+onclick="closeMagic()">
 
+✕ Close
 
-        <!-- CLOSE -->
+</button>
 
-        <button
-            class="close-magic"
-            onclick="closeMagic()">
 
-            ✕ Close
+<!-- LIGHT BURST -->
 
-        </button>
+<div class="light-burst"></div>
 
 
+<!-- LIGHT RAYS -->
 
-        <!-- LIGHT BURST -->
+<div class="ray ray1"></div>
+<div class="ray ray2"></div>
+<div class="ray ray3"></div>
+<div class="ray ray4"></div>
+<div class="ray ray5"></div>
+<div class="ray ray6"></div>
 
-        <div class="light-burst"></div>
 
+<!-- CENTER HEART -->
 
+<div class="magic-heart">
+❤️
+</div>
 
-        <!-- LIGHT RAYS -->
 
-        <div class="ray ray1"></div>
-        <div class="ray ray2"></div>
-        <div class="ray ray3"></div>
-        <div class="ray ray4"></div>
-        <div class="ray ray5"></div>
-        <div class="ray ray6"></div>
+<!-- MAGIC PHOTO 1 -->
 
+<div class="magic-photo magic-photo-one">
 
+<img
+src="IMG-20260622-WA0004.jpg"
+alt="Varam">
 
-        <!-- CENTER HEART -->
+</div>
 
-        <div class="magic-heart">
-            ❤️
-        </div>
 
+<!-- MAGIC PHOTO 2 -->
 
+<div class="magic-photo magic-photo-two">
 
-        <!-- PHOTO 1 -->
+<img
+src="IMG-20260520-WA0005.jpg"
+alt="Our memory">
 
-        <div class="magic-photo">
+</div>
 
-            <img
-                src="IMG-20260622-WA0004.jpg"
-                alt="Varam">
 
-        </div>
+<!-- MAGIC PHOTO 3 -->
 
+<div class="magic-photo magic-photo-three">
 
+<img
+src="IMG-20260429-WA0001.jpg"
+alt="Our memory">
 
-        <!-- PHOTO 2 -->
+</div>
 
-        <div class="magic-photo">
 
-            <img
-                src="IMG-20260520-WA0005.jpg"
-                alt="Our memory">
+<!-- MAGIC PHOTO 4 -->
 
-        </div>
+<div class="magic-photo magic-photo-four">
 
+<img
+src="IMG-20260521-WA0028.jpg"
+alt="Our memory">
 
+</div>
 
-        <!-- PHOTO 3 -->
 
-        <div class="magic-photo">
+<!-- SPARKLES -->
 
-            <img
-                src="IMG-20260429-WA0001.jpg"
-                alt="Our memory">
+<div
+class="sparkle"
+style="left:15%;top:25%;">
+✨
+</div>
 
-        </div>
+<div
+class="sparkle"
+style="left:80%;top:22%;">
+✨
+</div>
 
+<div
+class="sparkle"
+style="left:30%;top:70%;">
+✨
+</div>
 
+<div
+class="sparkle"
+style="left:75%;top:72%;">
+✨
+</div>
 
-        <!-- PHOTO 4 -->
+<div
+class="sparkle"
+style="left:50%;top:15%;">
+✨
+</div>
 
-        <div class="magic-photo">
+<div
+class="sparkle"
+style="left:50%;top:85%;">
+✨
+</div>
 
-            <img
-                src="IMG-20260521-WA0028.jpg"
-                alt="Our memory">
 
-        </div>
+<!-- FINAL MAGIC MESSAGE -->
 
+<div class="magic-message">
 
+Every light in this world could shine...
 
-        <!-- SPARKLES -->
+<br>
 
-        <div
-            class="sparkle"
-            style="left:15%;top:25%;">
-            ✨
-        </div>
+but you'd still be
+<br>
 
+my favorite one. ❤️
 
-        <div
-            class="sparkle"
-            style="left:80%;top:22%;">
-            ✨
-        </div>
+<br><br>
 
+<small>
+Happy Birthday, Varam ✨
+</small>
 
-        <div
-            class="sparkle"
-            style="left:30%;top:70%;">
-            ✨
-        </div>
+</div>
 
 
-        <div
-            class="sparkle"
-            style="left:75%;top:72%;">
-            ✨
-        </div>
+</div>
 
 
-        <div
-            class="sparkle"
-            style="left:50%;top:15%;">
-            ✨
-        </div>
 
+<script>
 
-        <div
-            class="sparkle"
-            style="left:50%;top:85%;">
-            ✨
-        </div>
 
+/* NORMAL SURPRISE */
 
+function openSurprise(){
 
-        <!-- FINAL MAGIC MESSAGE -->
+    document
+    .getElementById("birthday")
+    .scrollIntoView({
 
-        <div class="magic-message">
+        behavior:"smooth"
 
-            Every light in this world could shine...
+    });
 
-            <br>
+}
 
-            but you'd still be
-            <br>
 
-            my favorite one. ❤️
+/* OPEN MAGIC */
 
-            <br><br>
+function showMagic(){
 
-            <small>
-                Happy Birthday, Varam ✨
-            </small>
+    const screen =
+    document.getElementById("magicScreen");
 
-        </div>
+    screen.style.display="block";
 
+    document.body.style.overflow="hidden";
 
-    </div>
+}
 
 
+/* CLOSE MAGIC */
 
-    <!-- =========================
-         JAVASCRIPT
-    ========================= -->
+function closeMagic(){
 
-    <script>
+    const screen =
+    document.getElementById("magicScreen");
 
+    screen.style.display="none";
 
-        /* OPEN NORMAL SURPRISE */
+    document.body.style.overflow="auto";
 
-        function openSurprise() {
+}
 
-            document
-                .getElementById("birthday")
-                .scrollIntoView({
-
-                    behavior: "smooth"
-
-                });
-
-        }
-
-
-
-        /* OPEN MAGIC */
-
-        function showMagic() {
-
-            const screen =
-                document.getElementById("magicScreen");
-
-
-            screen.style.display = "block";
-
-
-            document.body.style.overflow = "hidden";
-
-        }
-
-
-
-        /* CLOSE MAGIC */
-
-        function closeMagic() {
-
-            const screen =
-                document.getElementById("magicScreen");
-
-
-            screen.style.display = "none";
-
-
-            document.body.style.overflow = "auto";
-
-        }
-
-
-    </script>
+</script>
 
 
 </body>
+
 </html>
